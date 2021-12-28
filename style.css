@@ -9,18 +9,19 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 html{
     font: 62.5%;
 }
 .card{
-    width: 17%;
-    height: 33rem;
+    width: 19%;
+    height: 36rem;
     background-color:hsl(216, 50%, 16%) ;
     padding: 2rem 2rem 0rem 2rem;
-    border-radius: 5px;
-    
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -59,7 +60,9 @@ position: relative;
 .card-component{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around; 
+    
+   
     
 }
 .img-avatar{
@@ -77,8 +80,8 @@ a:hover{
     color: hsl(178, 100%, 50%);
 }
 .p1{
-    font-size: .8rem;
-    line-height: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -93,7 +96,7 @@ a:hover{
     align-items: center;
 }
 .p4{
-    font-size: .8rem;
+    font-size: 1rem;
     color :hsl(215, 51%, 70%);
 }
 .p4 span{
@@ -106,11 +109,13 @@ a:hover{
 hr{
     width: 100%;
     color:  hsl(215, 32%, 27%);
+    
 }
 .avatar{
     display: flex;
     align-items: center;
     justify-self: center;
+    /* padding-bottom: -29rem; */
 }
 .img-avatar{
     margin-right: .5rem;
@@ -120,11 +125,25 @@ hr{
 }
 
 @media screen and (max-width: 375px) {
-
+ body{
+     width: 100%;
+     min-height: 100vh;
+     overflow-x: hidden;
+ }
     .card{
         width: 70%;
+       height: 80vh;
+       
+    }
+    .card-component{
+        height: 100%;
     }
     .p1,.p4{
-        font-size: 1rem;
+        font-size: .8rem;
+    }
+    hr{
+        width: 100%;
+        color:  hsl(215, 32%, 27%);
+        
     }
 }
